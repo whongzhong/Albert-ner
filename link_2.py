@@ -24,7 +24,7 @@ for lines in ids:
     asp_tag = ''
     asp = ''
     for item in lines:
-        tag_1, tag_2 = item[0].split('-')
+        tag_1, tag_2 = item[0].split('|')
         if(aspflag):
             if tag_1 == 'A':
                 ans.append((i, asp, '_'))
@@ -59,5 +59,13 @@ with open('task1_answer.csv', 'w', encoding='utf-8', newline='') as f:
     writer = csv.writer(f)  
     for row in ans:  
         writer.writerow(row)  
+with open('task2_answer.csv', 'w', encoding='utf-8', newline='') as f:  
+    writer = csv.writer(f)  
+    for row in ans1:  
+        writer.writerow(row) 
+with open('task3_answer.csv', 'w', encoding='utf-8', newline='') as f:  
+    writer = csv.writer(f)  
+    for row in ans2:  
+        writer.writerow(row) 
 #out=pd.DataFrame(data=ans)
 #out.to_csv('task1_answer.csv', encoding='utf-8', index=False, header=False)

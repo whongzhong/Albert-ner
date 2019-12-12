@@ -22,6 +22,7 @@ def get_chunk(sequence, label_to_index):
     """
     给定一个标注序列，将实体和位置组合起来，放置在一个列表中
     """
+    #print(label_to_index)
     unentry = [label_to_index["O"]]
     index_to_label = {index: label for label, index in label_to_index.items()}
     chunks = []
